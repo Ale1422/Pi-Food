@@ -1,0 +1,76 @@
+.recipe-create{
+    margin: 50px;
+    padding: 10px;
+}
+
+.recipe-create button{
+    color: #C2C5AA;
+    background-color: #414833;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100px;
+    border-radius:5px;
+}
+
+.recipe-create button:hover{
+    color: #414833 ;
+    background-color: #C2C5AA;
+}
+
+.recipe-create input{
+    background-color: #C2C5AA;
+    border: none;
+    font-size: 14px;
+    height: 20px;
+    padding: 5px;
+    width: 150px;
+    border-radius:5px;
+}
+
+
+.grid-form{
+    display: grid;
+    grid-template-columns: auto 150px auto;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-gap: 5px;
+}
+
+.grid-label{
+    grid-column: 1/2;
+}
+
+.grid-input{
+    grid-column: 2/3;
+}
+
+.grid-button{
+    grid-column: 3/4;
+}
+
+.grid-step{
+    grid-column: 2/3;
+    align-items:flex-start
+}
+
+.grid-stepbutton{
+    grid-column: 3/4;
+}
+
+.grid-dietas{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto ;
+    justify-content: center;
+    margin: 20px;
+}
+
+.grid-titulo{
+    margin: 10px;
+    grid-column:1/6 ;
+}
+
+.grid-check{
+    grid-column: auto;
+}

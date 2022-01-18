@@ -1,0 +1,25 @@
+.searchBar button{
+    color: #C2C5AA;
+    background-color: #414833;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100px;
+    border-radius:5px;
+}
+
+.searchBar button:hover{
+    color: #414833 ;
+    background-color: #C2C5AA;
+}
+
+.searchBar input{
+    background-color: #C2C5AA;
+    border: none;
+    font-size: 14px;
+    height: 20px;
+    padding: 5px;
+    width: 150px;
+    border-radius:5px;
+}

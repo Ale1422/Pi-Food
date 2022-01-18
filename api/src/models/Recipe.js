@@ -6,7 +6,34 @@ module.exports = (sequelize) => {
   sequelize.define('recipe', {
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
+    id:{
+      // type: DataTypes.INTEGER,
+      // allowNull: false,
+      // primaryKey: true
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
+      primaryKey: true
+    },
+    summary:{
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    score:{
+      type: DataTypes.INTEGER
+    },
+    healthScore:{
+      type: DataTypes.INTEGER
+    },
+    preparation:{
+      type: DataTypes.ARRAY(DataTypes.STRING)
+    },
+    // createInDb:{
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    //   defaultValue: true
+    // }
   });
 };

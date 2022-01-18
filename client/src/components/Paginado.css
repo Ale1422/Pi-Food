@@ -1,0 +1,28 @@
+.paginado{
+    
+    padding: 0;
+    margin: 15px;
+    background-color: #C2C5AA;
+    border-radius: 5px;
+}
+
+.paginado  a{
+    display: inline-block ;
+    margin: 2px;
+    padding: 8px 16px;
+    text-decoration: none;
+    /* border: 1px solid #b6ad90; */
+    background-color: #A4AC86;
+    border-radius: 5px;
+}
+
+.paginado ul a:hover:not(.active) {background-color: #C2C5AA;}
+
+.paginado ul a.active {
+    background-color: #414833;
+    color: #C2C5AA;
+}
+
+.paginado ul{
+    padding: 5px 30px;
+}
