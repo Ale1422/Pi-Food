@@ -1,0 +1,47 @@
+.button{
+    color: #C2C5AA;
+    background-color: #414833;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100px;
+    border-radius:5px;
+    margin: 20px;
+}
+
+.button:hover{
+    color: #414833 ;
+    background-color: #C2C5AA;
+}
+
+.recipe{
+    background-color: #A4AC86;
+    box-shadow: 2px 4px 15px 0  #414833;
+    margin: auto;
+    padding: 50px 30px;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.recipe img{
+    box-shadow: 2px 4px 15px 0  #414833;
+    border-radius: 15px;
+    width: 400px;
+}
+
+.resumen-paso{
+    margin: auto;
+    padding: 15px;
+    width: 600px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 13px;
+}
+
+.gif{
+    border-radius: 10px;
+}

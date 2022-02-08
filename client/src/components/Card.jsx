@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Card.css'
 
-export default function Card({id, name, image, diets}){
+export default function Card({id, name, image, diets, score}){
     return(
         <div className="card">
             <Link to ={`/home/${id}`}>
@@ -10,7 +10,9 @@ export default function Card({id, name, image, diets}){
             </Link>
             <h3>{name}</h3>
             <h5>Tipo de dietas</h5>
-            {diets?.map(el => <p>{el}</p>)}
+            {diets?.map(el => <p key={el}>{el}</p>)}
+            <h5>Puntuacion</h5>
+            <p>{score}</p>
         </div>
     );
 };

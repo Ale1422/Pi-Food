@@ -9,6 +9,7 @@
     grid-row: 1/2;
     margin: auto;
     width: 60%;
+    font-size: 25px;
 }
 
 .grid-searchBar{
@@ -100,5 +101,4 @@
     grid-template-columns: auto auto auto ;
     justify-content: center;
 }
-
 

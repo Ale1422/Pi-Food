@@ -8,8 +8,8 @@ import './RecipeCreate.css'
 function validator(input){
     let errors= {}
 
-    if(!input.name){
-        errors.name = 'Se requiere un Nombre'
+    if(!input.name ||!/([a-zA-Z])\w+/g.test(input.name)){
+        errors.name = 'Nombre invalido'
     }
     if(!input.summary){
         errors.summary = 'Es requerido un resumen del plato'
@@ -18,7 +18,7 @@ function validator(input){
         errors.score = 'Puntuación debe estar entre 0 y 100'
     }
     if(input.healthScore < 0 || input.healthScore > 100){
-        errors.score = 'Nivel de comida saludable debe estar entre 0 y 100'
+        errors.healthScore = 'Nivel de comida saludable debe estar entre 0 y 100'
     }
 
     return errors
@@ -29,7 +29,6 @@ export default function RecipeCreate(){
     const dispatch = useDispatch();
     const diets =  useSelector((state)=> state.diets)
     const [step, setStep] = useState('')
-    const [disable, setDisable] = useState(null)
     const [errors, setErrors]= useState({})
     const [input, setInput] = useState({
         name: '',
@@ -53,11 +52,6 @@ export default function RecipeCreate(){
             ...input,
             [e.target.name]: e.target.value
         }))
-        if(disable===null){
-            setDisable(true)
-        }else if(!errors.name&&!errors.summary&&!errors.score&&!errors.healthScore){
-            setDisable(false)
-        }        
     }
 
     let handleOnChangeStep= (e) =>{
@@ -97,6 +91,7 @@ export default function RecipeCreate(){
 
     let  handleSubmit= (e) =>{
         e.preventDefault();
+        if(!input.name||!input.summary||input.score < 0 || input.score > 100||input.healthScore < 0 || input.healthScore > 100) return alert('Formulario no valido')
         dispatch(postRecipe(input));
         alert('Receta creada');
         setInput({        
@@ -150,7 +145,7 @@ export default function RecipeCreate(){
                         )
                     })}
                 </div>
-                <button type="submit" disabled={disable}>Crear</button>
+                <button type="submit" >Crear</button>
             </form>
         </div>
     )

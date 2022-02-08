@@ -4,7 +4,9 @@ import './Paginado.css'
 export default function Paginado({recipesPerPage, allRecipes, paginado, currentPage}){
     const pageNumber = [];
 
-    for(let i=0 ; i< Math.ceil(allRecipes/recipesPerPage); i++){
+    let maxPage= Math.ceil(allRecipes/recipesPerPage)
+
+    for(let i=0 ; i<maxPage ; i++){
         pageNumber.push(i+1)
     }
     return(
@@ -13,7 +15,7 @@ export default function Paginado({recipesPerPage, allRecipes, paginado, currentP
             <ul>
                 {pageNumber && pageNumber.map(number => {
                     return(
-                        <a className={number===currentPage?'active':''} onClick={()=> paginado(number)} key={number}>{number}</a>
+                        <button className={number===currentPage?'active':''} onClick={()=> paginado(number)} key={number}>{number}</button>
                     )
                 })}
             </ul>

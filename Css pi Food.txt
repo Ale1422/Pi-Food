@@ -1,0 +1,26 @@
+https://mybrandnewlogo.com/es/generador-de-paleta-de-colores
+
+https://colorhunt.co/
+
+Paleta 1
+
+.color1 {color: #abd2ff;}
+.color2 {color: #eef8ff;}
+.color3 {color: #141a35;}
+.color4 {color: #76777c;}
+.color5 {color: #e2e2e2;}
+
+Paleta 2
+
+.color1 {color: #000000;}
+.color2 {color: #1a2649;}
+.color3 {color: #48599d;}
+.color4 {color: #8194fd;}
+.color5 {color: #c5d4ff;}
+
+Paleta 3
+
+https://colorhunt.co/palette/781d42a3423cde834df0d290
+
+
+Paleta 4

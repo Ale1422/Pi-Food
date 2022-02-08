@@ -6,7 +6,7 @@
     border-radius: 5px;
 }
 
-.paginado  a{
+.paginado  button{
     display: inline-block ;
     margin: 2px;
     padding: 8px 16px;
@@ -14,11 +14,13 @@
     /* border: 1px solid #b6ad90; */
     background-color: #A4AC86;
     border-radius: 5px;
+    border: none;
+    color:#414833 ;
 }
 
-.paginado ul a:hover:not(.active) {background-color: #C2C5AA;}
+.paginado ul button:hover:not(.active) {background-color: #C2C5AA;}
 
-.paginado ul a.active {
+.paginado ul button.active {
     background-color: #414833;
     color: #C2C5AA;
 }

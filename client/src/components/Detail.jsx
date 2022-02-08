@@ -20,30 +20,47 @@ export default function Detail(){
     },[])
 
     return(
+
+        
         <div>
             <Link to = '/home'>
-                <button>Home</button>
+                <button className="button">Home</button>
             </Link>
-            {
+            <div>
+                {
                 detail.name?
-                <div>
-                    <img src={detail.image} alt='not found' />
+                <div className="recipe">
+                    <img src={detail.image ? 
+                        detail.image :
+                        'https://img.freepik.com/foto-gratis/vista-perspectiva-plato-mate-naranja-vacio-cena-madera-blanca_79075-3058.jpg?size=626&ext=jpg'
+                        } alt='not found'
+                        />
                     <h1>{detail.name}</h1>
-                    <h2>Tipo de plato</h2>
-                    <p>{detail.dishTypes?detail.dishTypes: 'No definido'}</p>
-                    <h2>Tipos de dietas</h2>
-                    {detail.diets.map(el => el.name ? <p key={el.name}>{el.name +' '}</p>:<p key={el}>{el + ' '}</p> )}
+                    <div className="grid">
+                        <div>
+                            <h2>Tipo de plato</h2>
+                            <p>{detail.dishTypes?detail.dishTypes: 'No definido'}</p>
+                        </div>
+                        <div>
+                            <h2>Tipos de dietas</h2>
+                            {detail.diets.map(el => el.name ? <p key={el.name}>{el.name +' '}</p>:<p key={el}>{el + ' '}</p> )}
+                        </div>
+                        <div>
+                            <h2>Puntuacion del Plato</h2>
+                            <p>{detail.score}</p>
+                        </div>
+                        <div>
+                            <h2>Nivel de comida saludable</h2>
+                            <p>{detail.healthScore}</p>
+                        </div>
+                    </div>
                     <h2>Resumén del plato</h2>
-                    <p dangerouslySetInnerHTML={{ __html: detail.summary }}></p>
-                    {/* <h3 dangerouslySetInnerHTML={{ __html: detail.summary }}></h3> */}
-                    <h2>Puntuacion del Plato</h2>
-                    <p>{detail.score}</p>
-                    <h2>Nivel de comida saludable</h2>
-                    <p>{detail.healthScore}</p>
+                    <p className="resumen-paso" dangerouslySetInnerHTML={{ __html: detail.summary }}></p>
                     <h2>Paso a paso</h2>
-                    {detail.preparation?.map(el => <p key={el}>{el}</p>)}
-                </div>: <p>Loading...</p>
-            }
+                    {detail.preparation?.map(el => <p className="resumen-paso" key={el}>{el}</p>)}
+                </div>: <img className="gif" src="https://cdn.dribbble.com/users/645440/screenshots/3266490/loader-2_food.gif" />
+                }
+            </div>     
         </div>
     )
  }

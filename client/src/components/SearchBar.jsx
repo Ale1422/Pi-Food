@@ -4,19 +4,19 @@ import { getRecipesName } from '../actions';
 import './SearchBar.css'
 
 
-export default function SearchBar(){
+export default function SearchBar({setCurrentPage}){
     const dispatch= useDispatch();
     const [name, setName] = useState('');
 
     function handleInput(e){
         e.preventDefault();
         setName(e.target.value);
-        console.log(name)
     }
 
     let handleSubmit = (e)=>{
         e.preventDefault()
         dispatch(getRecipesName(name));
+        setCurrentPage(1)
         setName("")
     }
 

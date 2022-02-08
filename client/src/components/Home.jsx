@@ -12,7 +12,7 @@ export default function Home(){
     const allRecipes = useSelector((state) => state.recipes);
     const [render, setRender] = useState('') 
     const [currentPage, setCurrentPage] = useState(1);
-    const [recipesPerPage, setRecipesPerPage] = useState(9);
+    const recipesPerPage = 9
     const indexOfLastRecipe = currentPage * recipesPerPage;
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
     const currentRecipes = allRecipes.slice(indexOfFirstRecipe,indexOfLastRecipe);
@@ -23,31 +23,30 @@ export default function Home(){
 
     useEffect(()=>{
         dispatch(getRecipes())
-    },[])
+    },[dispatch])
 
     function handleSortName(e){
         e.preventDefault();
         dispatch(orderByName(e.target.value));
         setCurrentPage(1);
-        setRender(`Orden  ${e.target.value}` )
+        setRender(`Render  ${e.target.value}` )
     }
 
     function handleSortScore(e){
         e.preventDefault();
         dispatch(orderByScore(e.target.value));
         setCurrentPage(1);
-        setRender(`Orden ${e.target.value}`)
+        setRender(`Render ${e.target.value}`)
     }
 
     function handleFilterDiet(e){
         dispatch(filterByDiet(e.target.value))
     }
-console.log(typeof(currentRecipes[0]))
     return(
      <div  >
          <div className="grid-layout-menu">
             <div className="grid-titulo"><h1>Fast Food</h1></div>
-            <div className="grid-searchBar"><SearchBar/></div>
+            <div className="grid-searchBar"><SearchBar setCurrentPage={setCurrentPage}/></div>
             <div className="grid-paginado">
                 <Paginado 
                     recipesPerPage={recipesPerPage}
@@ -93,7 +92,7 @@ console.log(typeof(currentRecipes[0]))
                 typeof(currentRecipes[0]) === 'string'? <div>{currentRecipes[0]}</div>:currentRecipes.map(el => {
                     return(
                         <div>
-                            <Card id={el.id} name= {el.name} image={el.image} diets={el.diets.map(el => el.name? el.name: el)} key={el.id}/>
+                            <Card id={el.id} score={el.score} name= {el.name} image={el.image} diets={el.diets.map(el => el.name? el.name: el)} key={el.id}/>
                         </div>
                         )
                 })
