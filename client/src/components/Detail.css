@@ -6,7 +6,7 @@
     height: 30px;
     padding: 5px;
     width: 100px;
-    border-radius:5px;
+    border-radius:2px;
     margin: 20px;
 }
 
@@ -18,15 +18,16 @@
 .recipe{
     background-color: #A4AC86;
     box-shadow: 2px 4px 15px 0  #414833;
-    margin: auto;
+    margin: 50px auto;
     padding: 50px 30px;
-    width: 800px;
-    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    border-radius:2px;
 }
 
 .recipe img{
     box-shadow: 2px 4px 15px 0  #414833;
-    border-radius: 15px;
+    border-radius:4px;
     width: 400px;
 }
 

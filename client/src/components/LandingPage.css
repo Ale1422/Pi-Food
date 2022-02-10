@@ -4,13 +4,13 @@
 
 .landing button{
     color: #C2C5AA;
-    background-color: #414833;
+    background-color: #2B2B2B;
     border: none;
     font-size:30px;
     height: 60px;
     padding: 5px;
     width: 250px;
-    border-radius:5px;
+    border-radius:2px;
     margin: 200px;
 }
 

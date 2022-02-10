@@ -1,15 +1,15 @@
 .card{
-    background-color: #b6ad90;
+    background-color: #D6D2C4;
     width: 400px;
     height: 600px;
     padding-top: 20px;
-    border-radius: 5px;
+    border-radius:2px;
     margin: 10px;
-    color: #582F0E;
+    color: #2B2B2B;
     /* border: 1px solid #A68A64; */
     box-shadow: 2px 4px 15px 0  #414833;
 }
 .image{
-    border-radius: 25px;
+    border-radius:2px;
     box-shadow: 2px 4px 15px 0  #414833;
 }

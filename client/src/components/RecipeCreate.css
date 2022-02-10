@@ -1,26 +1,27 @@
 .recipe-create{
+    color: #2B2B2B;
     margin: auto;
     padding-bottom: 70px;
     padding-top: 70px ;
     padding-left: 30px ;
     padding-right: 30px;
-    background-color: #A4AC86 ;
+    background-color: #D6D2C4 ;
     width: 700px;
     margin-top: 30px;
     margin-bottom:  30px;
-    border-radius: 15px;
-    box-shadow: 10px 4px 30px 0  #414833
+    border-radius:4px;
+    box-shadow: 10px 4px 30px 0  #414833;
 }
 
 .recipe-create button{
-    color: #C2C5AA;
-    background-color: #414833;
+    color: #D6D2C4;
+    background-color: #2B2B2B;
     border: none;
     font-size: 14px;
     height: 30px;
     padding: 5px;
     width: 100px;
-    border-radius:5px;
+    border-radius:2px;
 }
 
 .recipe-create button:hover{
@@ -35,7 +36,7 @@
     height: 20px;
     padding: 5px;
     width: 150px;
-    border-radius:5px;
+    border-radius:2px;
 }
 
 

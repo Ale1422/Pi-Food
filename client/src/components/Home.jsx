@@ -45,7 +45,7 @@ export default function Home(){
     return(
      <div  >
          <div className="grid-layout-menu">
-            <div className="grid-titulo"><h1>Fast Food</h1></div>
+            <div className="grid-titulo"><h1>Pi Foods</h1></div>
             <div className="grid-searchBar"><SearchBar setCurrentPage={setCurrentPage}/></div>
             <div className="grid-paginado">
                 <Paginado 

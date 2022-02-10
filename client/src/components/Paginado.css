@@ -12,16 +12,16 @@
     padding: 8px 16px;
     text-decoration: none;
     /* border: 1px solid #b6ad90; */
-    background-color: #A4AC86;
-    border-radius: 5px;
+    background-color: #D6D2C4;
+    border-radius:2px;
     border: none;
-    color:#414833 ;
+    color:#2B2B2B ;
 }
 
-.paginado ul button:hover:not(.active) {background-color: #C2C5AA;}
+.paginado ul button:hover:not(.active) {background-color: #C9D8B6;}
 
 .paginado ul button.active {
-    background-color: #414833;
+    background-color: #2B2B2B;
     color: #C2C5AA;
 }
 
