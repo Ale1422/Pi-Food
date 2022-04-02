@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {postRecipe, getDiets} from "../actions"
+import {postRecipe, getDiets} from "../../actions"
 import { useDispatch, useSelector } from "react-redux";
 import './RecipeCreate.css'
+import Nav from "../Nav/Nav";
 
 
 function validator(input){
@@ -106,8 +107,9 @@ export default function RecipeCreate(){
     }  
     
     return(
+        <>
+        <Nav/>
         <div className="recipe-create">
-            <Link to= '/home'><button>Home</button></Link>
             <h1>Create your recipe</h1>
         
             <form onSubmit={handleSubmit}>
@@ -145,8 +147,9 @@ export default function RecipeCreate(){
                         )
                     })}
                 </div>
-                <button type="submit" >Crear</button>
+                <button disa type="submit" >Crear</button>
             </form>
         </div>
+    </>
     )
 }

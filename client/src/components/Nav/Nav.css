@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #2B2B2B;
+    color: #C2C5AA;
+}
+
+.nav button{
+    color: #C2C5AA;
+    background-color: #414833;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 100px;
+    border-radius:2px;
+}
+
+.nav button:hover{
+    color: #414833 ;
+    background-color: #C2C5AA;
+}

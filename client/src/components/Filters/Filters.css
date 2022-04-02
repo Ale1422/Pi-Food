@@ -1,0 +1,17 @@
+.filters{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+}
+
+.filters select{
+    background-color: #C2C5AA;
+    border: none;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: auto;
+    border-radius:5px;
+}
+

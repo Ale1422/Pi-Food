@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import { getRecipesName } from '../actions';
+import { getRecipesName } from '../../actions';
 import './SearchBar.css'
 
 
@@ -16,7 +16,7 @@ export default function SearchBar({setCurrentPage}){
     let handleSubmit = (e)=>{
         e.preventDefault()
         dispatch(getRecipesName(name));
-        setCurrentPage(1)
+        // setCurrentPage(1)
         setName("")
     }
 

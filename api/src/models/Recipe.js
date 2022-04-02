@@ -9,9 +9,6 @@ module.exports = (sequelize) => {
       allowNull: false
     },
     id:{
-      // type: DataTypes.INTEGER,
-      // allowNull: false,
-      // primaryKey: true
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
@@ -29,11 +26,6 @@ module.exports = (sequelize) => {
     },
     preparation:{
       type: DataTypes.ARRAY(DataTypes.STRING)
-    },
-    // createInDb:{
-    //   type: DataTypes.BOOLEAN,
-    //   allowNull: false,
-    //   defaultValue: true
-    // }
+    }
   });
 };
