@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {postRecipe, getDiets} from "../../actions"
 import { useDispatch, useSelector } from "react-redux";
 import './RecipeCreate.css'
@@ -108,7 +108,7 @@ export default function RecipeCreate(){
     
     return(
         <>
-        <Nav/>
+        <Nav recipeCreate={false} search={false}/>
         <div className="recipe-create">
             <h1>Create your recipe</h1>
         

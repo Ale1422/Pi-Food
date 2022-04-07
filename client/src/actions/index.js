@@ -66,3 +66,10 @@ export function orderByScore(payload){
         payload
     }
 }
+
+export function setModal(payload){
+    return{
+        type: 'SET_MODAL',
+        payload
+    }
+}

@@ -5,16 +5,20 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+    },    
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lastName: {
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    passwordHash: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false
     },

@@ -13,7 +13,7 @@ export default function Detail(){
     
     useEffect(() => {
         dispatch(getDetail(id))
-    },[dispatch])
+    },[dispatch,id])
 
     useEffect(()=>{
         return () => {setTimeout(dispatch(resetDetail()),1000)}

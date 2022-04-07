@@ -1,0 +1,25 @@
+.modal{
+    background-color: greenyellow;
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px 10px;
+    margin: 50px 30px;
+    top: 0;
+    z-index: 3;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px;
+}
+.form input{
+    margin: 5px
+}

@@ -4,7 +4,6 @@ import Home from './components/Home/Home';
 import LandingPage from'./components/LandingPage/LandingPage';
 import RecipeCreate from './components/RecipeCreate/RecipeCreate';
 import Detail from './components/Detail/Detail';
-import Filters from './components/Filters/Filters';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Route path= '/home' element={<Home/>}/>
         <Route path= '/recipe' element={<RecipeCreate/>}/>
         <Route path= '/home/:id' element={<Detail/>}/>
-        <Route path= '/filters' element={<Filters/>}/>
       </Routes>
     </div>
     </Router>

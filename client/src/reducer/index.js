@@ -2,7 +2,8 @@ const initialState = {
     recipes: [],
     recipesToFilter:[],
     diets: [],
-    detail:[]   
+    detail:[],
+    modal: false   
 }
 
 function rootReducer(state=initialState, action){
@@ -97,6 +98,11 @@ function rootReducer(state=initialState, action){
             return{
                 ...state,
                 recipes: sortScore
+            }
+        case 'SET_MODAL':
+            return{
+                ...state,
+                modal: action.payload
             }
         default:
             return state
