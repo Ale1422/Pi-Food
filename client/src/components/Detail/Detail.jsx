@@ -3,29 +3,27 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetail, resetDetail } from "../../actions";
 import './Detail.css';
+import Nav from "../Nav/Nav";
+import Modal from "../Modal/Modal";
 
 export default function Detail(){
 
     let {id} = useParams()
     const dispatch = useDispatch()
-    
+    const open = useSelector((state) => state.modal)
     const detail = useSelector((state) => state.detail)
     
     useEffect(() => {
+        dispatch(resetDetail())
         dispatch(getDetail(id))
     },[dispatch,id])
 
-    useEffect(()=>{
-        return () => {setTimeout(dispatch(resetDetail()),1000)}
-    },[])
 
     return(
 
         
         <div>
-            <Link to = '/home'>
-                <button className="button">Home</button>
-            </Link>
+            <Nav/>
             <div>
                 {
                 detail.name?
@@ -60,7 +58,8 @@ export default function Detail(){
                     {detail.preparation?.map(el => <p className="resumen-paso" key={el}>{el}</p>)}
                 </div>: <img className="gif" src="https://cdn.dribbble.com/users/645440/screenshots/3266490/loader-2_food.gif" />
                 }
-            </div>     
+            </div>
+            {open? <Modal/> : null}     
         </div>
     )
  }

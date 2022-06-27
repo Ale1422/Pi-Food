@@ -1,3 +1,16 @@
+.fondo{
+    width:  100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .button{
     color: #C2C5AA;
     background-color: #414833;
@@ -45,4 +58,5 @@
 
 .gif{
     border-radius: 10px;
+    margin-top: 20px;
 }

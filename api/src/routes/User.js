@@ -43,6 +43,11 @@ router.get('/infouser',  (req, res) =>{
     res.send(req.user)
 })
 
+router.post('/logout' , async (req, res) => {
+    await req.logOut();
+   res.send(req.user)
+})
+
 
 
 

@@ -3,7 +3,8 @@ const initialState = {
     recipesToFilter:[],
     diets: [],
     detail:[],
-    modal: false   
+    modal: false,
+    user: {}   
 }
 
 function rootReducer(state=initialState, action){
@@ -103,6 +104,11 @@ function rootReducer(state=initialState, action){
             return{
                 ...state,
                 modal: action.payload
+            }
+        case 'SET_USER':
+            return{
+                ...state,
+                user: action.payload
             }
         default:
             return state

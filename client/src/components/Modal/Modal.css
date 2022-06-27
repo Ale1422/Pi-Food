@@ -1,12 +1,24 @@
+.fondo{
+    width:  100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .modal{
     background-color: greenyellow;
     border-radius: 5px;
-    position: absolute;
+    position: relative;
     padding: 10px 10px;
     margin: 50px 30px;
     top: 0;
     z-index: 3;
 }
+
 
 .titulo{
     display: flex;

@@ -2,9 +2,8 @@ import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import {postRecipe, getDiets} from "../../actions"
 import { useDispatch, useSelector } from "react-redux";
-import './RecipeCreate.css'
 import Nav from "../Nav/Nav";
-
+import './RecipeCreate.css'
 
 function validator(input){
     let errors= {}
@@ -147,7 +146,7 @@ export default function RecipeCreate(){
                         )
                     })}
                 </div>
-                <button disa type="submit" >Crear</button>
+                <button type="submit" >Crear</button>
             </form>
         </div>
     </>
